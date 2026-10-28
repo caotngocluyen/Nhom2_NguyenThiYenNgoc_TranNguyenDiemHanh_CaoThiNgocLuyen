@@ -1,0 +1,16 @@
+HYBRID MODEL EVALUATION RESULTS
+==================================================
+Tập dữ liệu: MovieLens K-Core mở rộng (21,158 phim, 24.77 triệu ratings)
+Giao thức: Negative Sampling (1 Ground Truth + 99 Negatives), Top-10
+Thành phần: SVD Matrix Factorization + Deep Semantic Embeddings (Sentence-Transformers)
+
+1. Hybrid Fixed (alpha=0.7):
+   - Hit Rate@10: 0.3867 (38.67%)
+   - NDCG@10:     0.2239
+   - Ghi chú: Trọng số cố định 70% SVD + 30% Semantic Embeddings.
+
+2. Hybrid Adaptive Alpha:
+   - Hit Rate@10: 0.3867 (38.67%)
+   - NDCG@10:     0.2436
+   - Ghi chú: Trọng số alpha(u) biến thiên phi tuyến [0.25, 0.88] theo mật độ tương tác của người dùng.
+   - Mức cải thiện NDCG: +8.78% so với Hybrid Fixed.

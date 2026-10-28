@@ -1,0 +1,7 @@
+BAO CAO TIEN TRINH CAI TIEN MO HINH
+Phuong phap                                    Hit Rate@10   NDCG@10   Ghi chu
+1. He thong cu (Chua loc K-Core)                     2.40%    0.0250   Mo hinh bi phan manh, sparsity cao
+2. K-Core (min_movie=20) + Two-Stage                80.00%    0.5041   16,705 phim
+3. K-Core mo rong (min_movie=10) + SVD              39.67%    0.2328   21,158 phim, RMSE=0.7940, MAE=0.5977 (cf_results.txt)
+4. K-Core mo rong + Two-Stage Regressor             81.67%    0.5302   Mo hinh Pointwise cu
+5. Two-Stage LambdaRank + Genre Affinity           83.00%    0.5649   Hieu suat cao nhat toan he thong

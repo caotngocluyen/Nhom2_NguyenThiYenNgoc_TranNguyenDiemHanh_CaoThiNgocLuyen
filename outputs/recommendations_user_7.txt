@@ -1,0 +1,77 @@
+KET QUA GOI Y PHIM CHO NGUOI DUNG: 7
+So luot danh gia trong lich su (Train): 42
+Phim tieu bieu da thich:
+  5.0 sao: The Lord of the Rings: The Fellowship of the Ring
+  5.0 sao: Leon: The Professional
+  5.0 sao: The Dark Knight
+  5.0 sao: American Psycho
+  4.5 sao: Fight Club
+
+Thong tin kiem chung (Ground Truth trong tap Test):
+  Tong so phim user thuc te da xem trong tap Test: 6
+  So phim thuc te danh gia tich cuc (rating >= 3.5): 3
+
+Mo hinh: SVD (CF)
+   1. Se7en                                            | Diem: 4.007
+   2. The Human Condition I: No Greater Love           | Diem: 3.911
+   3. Il Posto                                         | Diem: 3.889
+   4. My Neighbor Totoro                               | Diem: 3.871
+   5. Bobby Fischer Against the World                  | Diem: 3.776
+   6. Ballad of a Soldier                              | Diem: 3.760
+   7. Evangelion: 2.0 You Can (Not) Advance            | Diem: 3.756
+   8. La Classe Américaine                             | Diem: 3.755
+   9. Come and See                                     | Diem: 3.721
+  10. Dr. Strangelove or: How I Learned to Stop Worryi | Diem: 3.720
+  --> Ti le goi y trung khop thuc te (rating >= 3.5): 0/10 phim (0%)
+
+Mo hinh: Semantic Content
+   1. The Killing                                      | Diem: 0.581
+   2. Prison                                           | Diem: 0.572
+   3. Crime + Punishment in Suburbia                   | Diem: 0.570
+   4. The Rise                                         | Diem: 0.565
+   5. Raw Deal                                         | Diem: 0.560
+   6. Life of Crime                                    | Diem: 0.556
+   7. The Hard Word                                    | Diem: 0.556
+   8. Crime and Punishment                             | Diem: 0.556
+   9. Crime and Punishment                             | Diem: 0.556
+  10. Penitentiary                                     | Diem: 0.554
+  --> Ti le goi y trung khop thuc te (rating >= 3.5): 0/10 phim (0%)
+
+Mo hinh: Hybrid Adaptive (alpha=0.88)
+   1. Se7en                                            | Diem: 3.959
+   2. The Human Condition I: No Greater Love           | Diem: 3.847
+   3. Il Posto                                         | Diem: 3.845
+   4. My Neighbor Totoro                               | Diem: 3.816
+   5. Bobby Fischer Against the World                  | Diem: 3.746
+   6. Ballad of a Soldier                              | Diem: 3.730
+   7. Evangelion: 2.0 You Can (Not) Advance            | Diem: 3.727
+   8. La Classe Américaine                             | Diem: 3.719
+   9. Come and See                                     | Diem: 3.698
+  10. Dr. Strangelove or: How I Learned to Stop Worryi | Diem: 3.694
+  --> Ti le goi y trung khop thuc te (rating >= 3.5): 0/10 phim (0%)
+
+Mo hinh: Two-Stage LightGBM (LambdaRank)
+   1. The Silence of the Lambs                         | Diem: 4.906
+   2. Pulp Fiction                                     | Diem: 4.889
+   3. Forrest Gump                                     | Diem: 4.585
+   4. Apollo 13                                        | Diem: 4.337
+   5. American Beauty                                  | Diem: 4.325 [HIT! Thuc te cho: 4.5 sao]
+   6. Star Wars                                        | Diem: 4.220
+   7. Toy Story                                        | Diem: 4.155
+   8. Braveheart                                       | Diem: 4.063
+   9. Jurassic Park                                    | Diem: 4.056
+  10. Raiders of the Lost Ark                          | Diem: 3.990
+  --> Ti le goi y trung khop thuc te (rating >= 3.5): 1/10 phim (10%)
+
+Mo hinh: Two-Stage LightGBM + MMR Diversified (lambda=0.7)
+   1. The Silence of the Lambs                         | Diem: 4.906
+   2. Forrest Gump                                     | Diem: 4.585
+   3. Star Wars                                        | Diem: 4.220
+   4. Apollo 13                                        | Diem: 4.337
+   5. American Beauty                                  | Diem: 4.325 [HIT! Thuc te cho: 4.5 sao]
+   6. Pulp Fiction                                     | Diem: 4.889
+   7. Jurassic Park                                    | Diem: 4.056
+   8. Toy Story                                        | Diem: 4.155
+   9. Braveheart                                       | Diem: 4.063
+  10. The Lord of the Rings: The Two Towers            | Diem: 3.585
+  --> Ti le goi y trung khop thuc te (rating >= 3.5): 1/10 phim (10%)

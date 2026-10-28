@@ -1,0 +1,37 @@
+HYPERPARAMETER TUNING RESULTS (CẬP NHẬT SAU CẢI TIẾN)
+
+
+ SVD TUNING (TRÊN VALIDATION SẠCH K-CORE) 
+n_factors  n_epochs  lr_all  reg_all  rmse_val  mae_val  train_time_s
+     50.0      15.0   0.005     0.02    0.9061   0.6899         73.9s  (TỐI ƯU NHẤT)
+     50.0      20.0   0.005     0.02    0.9081   0.6912         60.1s
+    100.0      15.0   0.005     0.02    0.9109   0.6935         54.1s
+
+Nhận xét:
+- n_factors=50 đạt RMSE thấp hơn n_factors=100 (0.9061 vs 0.9109) vì tránh hiện tượng
+  overfitting trên ma trận thưa và giảm dung lượng mô hình chỉ còn 115 MB.
+
+ HYBRID ALPHA TUNING (TRÊN VALIDATION SẠCH) 
+ alpha  rmse_val  mae_val   Ghi chú
+   0.0    0.9485   0.7271   Thuần Content-Based
+   0.1    0.9322   0.7145
+   0.2    0.9182   0.7035
+   0.3    0.9065   0.6937
+   0.4    0.8971   0.6856
+   0.5    0.8903   0.6794   Cân bằng 50-50
+   0.6    0.8861   0.6754
+   0.7    0.8844   0.6736   TỐI ƯU NHẤT (70% SVD + 30% Content-Based)
+   0.8    0.8853   0.6740
+   0.9    0.8888   0.6763
+   1.0    0.8949   0.6807   Thuần SVD
+
+Nhận xét:
+- alpha=0.7 đạt RMSE thấp nhất (0.8844) và MAE thấp nhất (0.6736).
+- Kết hợp 70% gu cộng đồng (SVD) và 30% nội dung phim (Content-Based) giúp mô hình
+  vượt trội hơn cả hai mô hình thành phần đơn lẻ.
+
+ BEST CONFIGURATION CHÍNH THỨC 
+SVD Params: {'n_factors': 50, 'n_epochs': 15, 'lr_all': 0.005, 'reg_all': 0.02}
+SVD RMSE val: 0.9061
+Hybrid alpha: 0.7 (RMSE val = 0.8844, RMSE test = 0.9009)
+ 

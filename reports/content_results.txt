@@ -1,0 +1,6 @@
+CONTENT-BASED FILTERING RESULTS
+==================================================
+model: ContentBased_TF-IDF
+rmse_val: 1.0795656442642212
+mae_val: 0.8460736274719238
+max_features: 5000

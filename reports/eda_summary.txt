@@ -1,0 +1,51 @@
+
+Ngày tạo: 2026-10-21 19:43:45
+
+ THÔNG TIN TỔNG QUAN 
+Tổng số lượt đánh giá: 26,024,289
+Số người dùng:          270,896
+Số phim được đánh giá:  45,115
+Số phim có metadata:    45,884
+Độ thưa ma trận:        99.7871%
+
+ PHÂN PHỐI RATING 
+Rating trung bình:      3.528 / 5.0
+Rating trung vị:        3.5
+Độ lệch chuẩn:         1.065
+Rating >= 3.5 (thích):  61.9%
+
+ HOẠT ĐỘNG NGƯỜI DÙNG 
+Số rating/user (min):   1
+Số rating/user (max):   18,276
+Số rating/user (median):30
+Số rating/user (mean):  96.1
+Cold-start (<5 rating): 14,789 users (5.5%)
+
+ ĐỘ PHỔ BIẾN PHIM 
+Số rating/phim (min):   1
+Số rating/phim (max):   91,921
+Số rating/phim (median):8
+Số rating/phim (mean):  576.8
+Phim ít quan tâm (<5):  17,988 phim (39.9%)
+
+ ẢNH HƯỞNG ĐẾN MÔ HÌNH 
+1. Độ thưa 99.8% -> Collaborative Filtering gặp khó khăn
+   Giải pháp: Matrix Factorization (SVD) xử lý tốt hơn User/Item-based CF thuần túy
+
+2. Cold-start users: 14,789 users với < 5 rating
+   Giải pháp: Dùng Popularity-based hoặc Content-based cho họ
+
+3. Long-tail movies: nhiều phim ít được xem
+   Giải pháp: Popularity filter + Content-based để handle
+
+4. Rating bias (trung bình 3.53): 
+   Giải pháp: Normalize rating khi so sánh giữa các mô hình
+
+ BIỂU ĐỒ ĐÃ TẠO 
+01_rating_distribution.png  - Phân phối điểm đánh giá
+02_ratings_per_user.png     - Số lượt đánh giá theo user
+03_ratings_per_movie.png    - Số lượt đánh giá theo phim
+04_sparsity.png             - Độ thưa ma trận
+05_genre_distribution.png   - Phân phối thể loại
+06_release_year.png         - Phân phối năm phát hành
+07_rating_over_time.png     - Xu hướng theo thời gian

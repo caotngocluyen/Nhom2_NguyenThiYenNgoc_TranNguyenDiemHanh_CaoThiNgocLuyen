@@ -1,0 +1,45 @@
+# Du lieu ket qua va file mo hinh
+outputs/*.parquet
+# Moi truong Python
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+
+# File cau hinh rieng, thong tin nhay cam
+.env
+.env.*
+!.env.example
+
+# Du lieu goc va du lieu da xu ly
+data/
+processed/
+Dataset/
+datasets/
+
+# Mo hinh da huan luyen va cac file lon
+models/
+*.joblib
+*.pkl
+*.pickle
+*.h5
+*.keras
+*.pt
+*.pth
+*.onnx
+
+# File tam va log
+*.log
+logs/
+tmp/
+temp/
+.cache/
+
+# Cau hinh va cache cua IDE
+.vscode/
+.idea/
+
+# File he dieu hanh
+.DS_Store
+Thumbs.db

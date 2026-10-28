@@ -1,0 +1,4 @@
+BASELINE MODEL RESULTS
+
+Global Mean: RMSE=1.0905, MAE=0.8504
+Popularity (Bayesian): RMSE=1.0195, MAE=0.7682

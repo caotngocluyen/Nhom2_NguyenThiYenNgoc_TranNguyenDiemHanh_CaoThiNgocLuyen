@@ -1,0 +1,74 @@
+KET QUA GOI Y PHIM CHO NGUOI DUNG: 8659
+So luot danh gia trong lich su (Train): 6636
+Phim tieu bieu da thich:
+  5.0 sao: All Quiet on the Western Front
+  5.0 sao: An American in Paris
+  5.0 sao: Big Night
+  5.0 sao: Braveheart
+  5.0 sao: Casablanca
+
+Thong tin kiem chung (Ground Truth trong tap Test):
+  Tong so phim user thuc te da xem trong tap Test: 830
+  So phim thuc te danh gia tich cuc (rating >= 3.5): 441
+
+Mo hinh: SVD (CF)
+   1. Late Autumn                                      | Diem: 3.999 [HIT! Thuc te cho: 4.0 sao]
+   2. The Adventures of Sherlock Holmes and Doctor Wat | Diem: 3.961
+   3. Love Streams                                     | Diem: 3.961
+   4. Bill Burr: You People Are All The Same           | Diem: 3.920
+   5. 3 Idiots                                         | Diem: 3.905
+   6. The Irony of Fate, or Enjoy Your Bath!           | Diem: 3.899
+   7. Boy & the World                                  | Diem: 3.899
+   8. An Honest Liar                                   | Diem: 3.887
+   9. Charulata                                        | Diem: 3.871
+  10. The Endurance: Shackleton's Legendary Antarctic  | Diem: 3.871
+  --> Ti le goi y trung khop thuc te (rating >= 3.5): 1/10 phim (10%)
+
+Mo hinh: Semantic Content
+   1. Mr. Woodcock                                     | Diem: 0.515
+   2. Woody Allen: A Documentary                       | Diem: 0.487
+   3. Rubin and Ed                                     | Diem: 0.480
+   4. Woodlawn                                         | Diem: 0.464
+   5. The Editor                                       | Diem: 0.463
+   6. Tales From the Script                            | Diem: 0.454
+   7. The Forest for the Trees                         | Diem: 0.453
+  --> Ti le goi y trung khop thuc te (rating >= 3.5): 0/7 phim (0%)
+
+Mo hinh: Hybrid Adaptive (alpha=0.88)
+   1. Late Autumn                                      | Diem: 3.921 [HIT! Thuc te cho: 4.0 sao]
+   2. Love Streams                                     | Diem: 3.885
+   3. The Adventures of Sherlock Holmes and Doctor Wat | Diem: 3.884
+   4. Bill Burr: You People Are All The Same           | Diem: 3.847
+   5. 3 Idiots                                         | Diem: 3.833
+   6. The Irony of Fate, or Enjoy Your Bath!           | Diem: 3.831
+   7. Boy & the World                                  | Diem: 3.830
+   8. An Honest Liar                                   | Diem: 3.819
+   9. Charulata                                        | Diem: 3.809
+  10. The Endurance: Shackleton's Legendary Antarctic  | Diem: 3.807
+  --> Ti le goi y trung khop thuc te (rating >= 3.5): 1/10 phim (10%)
+
+Mo hinh: Two-Stage LightGBM (LambdaRank)
+   1. Saving Private Ryan                              | Diem: 3.650 [HIT! Thuc te cho: 5.0 sao]
+   2. The Dark Knight                                  | Diem: 2.950 [HIT! Thuc te cho: 4.5 sao]
+   3. Dr. Strangelove or: How I Learned to Stop Worryi | Diem: 2.688 [HIT! Thuc te cho: 4.5 sao]
+   4. Million Dollar Baby                              | Diem: 2.204 [HIT! Thuc te cho: 4.0 sao]
+   5. Juno                                             | Diem: 2.100
+   6. The Hangover                                     | Diem: 1.961
+   7. Slumdog Millionaire                              | Diem: 1.957
+   8. Django Unchained                                 | Diem: 1.861 [HIT! Thuc te cho: 4.0 sao]
+   9. Inglourious Basterds                             | Diem: 1.846
+  10. Shutter Island                                   | Diem: 1.767
+  --> Ti le goi y trung khop thuc te (rating >= 3.5): 5/10 phim (50%)
+
+Mo hinh: Two-Stage LightGBM + MMR Diversified (lambda=0.7)
+   1. Saving Private Ryan                              | Diem: 3.650 [HIT! Thuc te cho: 5.0 sao]
+   2. The Dark Knight                                  | Diem: 2.950 [HIT! Thuc te cho: 4.5 sao]
+   3. Million Dollar Baby                              | Diem: 2.204 [HIT! Thuc te cho: 4.0 sao]
+   4. Dr. Strangelove or: How I Learned to Stop Worryi | Diem: 2.688 [HIT! Thuc te cho: 4.5 sao]
+   5. Juno                                             | Diem: 2.100
+   6. The King's Speech                                | Diem: 1.680 [HIT! Thuc te cho: 4.5 sao]
+   7. The Hangover                                     | Diem: 1.961
+   8. Django Unchained                                 | Diem: 1.861 [HIT! Thuc te cho: 4.0 sao]
+   9. WALL·E                                           | Diem: 1.353
+  10. Slumdog Millionaire                              | Diem: 1.957
+  --> Ti le goi y trung khop thuc te (rating >= 3.5): 6/10 phim (60%)

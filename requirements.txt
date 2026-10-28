@@ -1,0 +1,30 @@
+# requirements.txt - Danh sách thư viện cần cài đặt
+# Cài đặt bằng lệnh: pip install -r requirements.txt
+
+# Xử lý dữ liệu
+pandas>=2.0.0
+numpy>=1.24.0
+
+# Machine Learning
+scikit-learn>=1.2.0
+scikit-surprise>=1.1.3  # Collaborative Filtering (SVD, SVD++, NMF)
+implicit>=0.7.0         # ALS Matrix Factorization cho implicit feedback
+lightgbm>=4.0.0         # Two-Stage Re-ranking GBDT
+sentence-transformers>=2.2.0 # Deep Semantic Embeddings
+torch>=2.0.0            # Deep Learning backend
+
+# Tính toán khoa học
+scipy>=1.10.0
+
+# Lưu file định dạng Parquet (nhanh, nhỏ hơn CSV)
+pyarrow>=11.0.0
+
+# Lưu/load mô hình
+joblib>=1.2.0
+
+# Thanh tiến trình
+tqdm>=4.65.0
+
+# Vẽ biểu đồ
+matplotlib>=3.7.0
+seaborn>=0.12.0

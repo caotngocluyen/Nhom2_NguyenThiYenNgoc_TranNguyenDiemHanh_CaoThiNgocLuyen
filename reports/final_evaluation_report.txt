@@ -1,0 +1,35 @@
+BAO CAO DANH GIA MO HINH GOI Y PHIM
+Giao thuc kiem thu: Negative Sampling (1 Ground Truth + 99 Negatives unrated)
+Tap du lieu: MovieLens K-Core mo rong (min_user=20, min_movie=10) - 21,158 phim, 24.77 trieu ratings
+Top-K: 10
+Nguong rating tich cuc: 3.5
+
+BANG SO SANH HIEU SUAT:
+                          model  hit_rate@10  ndcg@10
+                 Content TF-IDF     0.183333 0.087143
+       Semantic (Sentence-BERT)     0.146667 0.059078
+                       SVD (CF)     0.396667 0.232796
+       Hybrid Fixed (alpha=0.7)     0.386667 0.223908
+          Hybrid Adaptive Alpha     0.386667 0.243577
+Two-Stage LightGBM (LambdaRank)     0.830000 0.564861
+
+Mo hinh dat Hit@10 cao nhat: Two-Stage LightGBM (LambdaRank) (0.8300)
+Mo hinh dat NDCG@10 cao nhat: Two-Stage LightGBM (LambdaRank) (0.5649)
+
+NHAN XET VE CAC CAI TIEN:
+1. Mo rong danh muc phim (K-Core min_movie=10) & Hieu nang SVD:
+   - Giu lai 21,158 bo phim (+4,453 phim, tang +26.6% danh muc so voi moc cu).
+   - SVD hoc hoi tot tren khong gian mo rong voi Validation RMSE dat 0.7940, MAE dat 0.5977 (luu tai cf_results.txt).
+
+2. Trong so thich ung dong (Adaptive Alpha):
+   - Tu dong dieu chinh trong so tuy thuoc lich su hoat dong cua nguoi dung.
+   - Uu tien dac trung noi dung cho nguoi dung moi va CF cho nguoi dung lau nam.
+
+3. Bieu dien ngu nghia sau (Semantic Embeddings):
+   - Su dung all-MiniLM-L6-v2 anh xa cot truyen va the loai thanh vector 384 chieu.
+   - Cung cap dac trung ngu nghia sau cho qua trinh Re-ranking va da dang hoa MMR.
+
+4. Dac trung Trung khop the loai (Genre Affinity Feature) va LightGBM LambdaRank:
+   - Tich hop dac trung genre_match_score phan anh muc do trung khop the loai user ua thich.
+   - Chuyen ham muc tieu sang LambdaRank (Listwise NDCG optimization).
+   - Hieu qua dot pha: Hit@10 dat 83.00% va NDCG@10 dat 0.5649.
